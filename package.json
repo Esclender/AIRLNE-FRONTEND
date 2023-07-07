@@ -1,21 +1,36 @@
 {
-  "name": "airlne_frontend",
+  "name": "airlne-beta",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@material-tailwind/react": "^2.0.4",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.6",
+    "@mui/x-date-pickers": "^6.9.1",
+    "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
+    "tailwindcss": "^3.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "user": "set REACT_APP_ROL=USER && npm run start",
+    "admin": "set REACT_APP_ROL=ADMIN && npm run start"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +49,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "ROL"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "webpack-cli": "^5.1.4"
   }
 }

@@ -1,6 +1,13 @@
-import DataTable from './DataTable.js'
+import DataTablePaq from './SecctionPaquete/DataTablePaq.js'
 
-const Secction = ({ id, title, info, route }) => {
+const SecctionPaquete = ({ id, title }) => {
+  const paqueteRoutes = {
+    get: '/paquete',
+    put: '/paquete',
+    delete: '/paquete',
+    post: '/paquete'
+  }
+
   return (
     <section id={id} className="p-2 mb-56" >
       <div className="flex flex-row items-center ml-20" >
@@ -8,10 +15,10 @@ const Secction = ({ id, title, info, route }) => {
         <div style={{ width: '155px', height: '1px', border: '1px solid rgb(75 85 99)', marginTop: '2px' }}></div>
       </div>
 
-      <DataTable route={route} headers={info} />
+      <DataTablePaq route={paqueteRoutes} />
 
     </section>
   )
 }
 
-export default Secction
+export default SecctionPaquete

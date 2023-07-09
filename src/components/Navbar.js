@@ -1,10 +1,9 @@
-import { Button } from "@material-tailwind/react";
-import { Link } from 'react-router-dom';
+import { Button } from '@material-tailwind/react'
+import { Link } from 'react-router-dom'
 
-import logo from "../assets/Logo.png"
+import logo from '../assets/Logo.png'
 
 const Navbar = () => {
-
   const buttons = [
     'Vuelos',
     'Hoteles',
@@ -13,23 +12,23 @@ const Navbar = () => {
     'Reclamos',
     'PasajeroFrecuente',
     'Categorias',
-    "Pasajeros"
+    'Pasajeros'
   ]
 
-  return(
-    <nav class="bg-hero w-100 h-14 flex flex-row " >
-      <img src={logo} class=" w-50 h-10 pt-1.5" alt="" />
+  return (
+    <nav className="bg-hero w-100 h-14 flex flex-row " >
+      <img src={logo} className=" w-50 h-10 pt-1.5" alt="" />
 
-      <div className="flex flex-row justify-end pr-3 pt-1.5 gap-4" style={{width:'87%'}}>
+      <div className="flex flex-row justify-end pr-3 pt-1.5 gap-4" style={{ width: '87%' }}>
 
         {
           buttons.map((button, index) => {
             return (
-              <Button  className='p-2 
-                font-[Roboto Mono] 
+              <Button className='p-2
+                font-[Roboto Mono]
                 rounded-2xl bg-transparent font-thin
                 hover:bg-white hover:text-hero'>
-                  <Link to={/${button.toLowerCase()}} >{button}</Link>
+                  <Link to={`/${button.toLowerCase()}`} >{button}</Link>
               </Button>
             )
           })

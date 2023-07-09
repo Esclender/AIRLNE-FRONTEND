@@ -1,22 +1,23 @@
-import { LocalizationProvider } from '@mui/x-date-pickers';
+import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom'
 
+import Navbar from './components/Navbar.js'
+import Hero from './components/Hero.js'
+import Secction from './components/Secction.js'
+import SecctionPaquete from './components/SecctionPaquete.js'
+import SecctionFormCliente from './components/SecctionClienteFr.js'
 
-import Navbar from "./components/Navbar.js"
-import Hero from "./components/Hero.js"
-import Secction from "./components/Secction.js"
-import SecctionPaquete from './components/SecctionPaquete.js';
-import SecctionFormCliente from './components/SecctionClienteFr.js';
+import SectionCat from './components/Categories/CategoriesSec.js'
+import SecctionForm from './components/SectionFormulario.js'
 
-import SectionCat from './components/Categories/CategoriesSec.js';
-import SecctionForm from './components/SectionFormulario.js';
+import ReservaVuelohome from './components/ReservasVuelos/ReservaVueloHome.js'
 
 import { store } from './app/store'
 import { Provider } from 'react-redux'
 
-function App() {
+function App () {
   const vuelosHeaders = {
     destination: 'Destino',
     origin: 'Origen',
@@ -26,10 +27,10 @@ function App() {
   }
 
   const vuelosRoutes = {
-    get: "/vuelos",
-    put: "/vuelos",
-    delete: "/vuelos",
-    post: "/vuelos"
+    get: '/vuelos',
+    put: '/vuelos',
+    delete: '/vuelos',
+    post: '/vuelos'
   }
 
   const hotelesHeaders = {
@@ -39,24 +40,24 @@ function App() {
   }
 
   const hotelesRoutes = {
-    get: "/hotel",
-    put: "/hotel/reservas",
-    delete: "/hotel/reservas",
-    post: "/hotel/reservas"
+    get: '/hotel',
+    put: '/hotel/reservas',
+    delete: '/hotel/reservas',
+    post: '/hotel/reservas'
   }
 
   const pasajeroHeaders = {
     name: 'Nombre',
     lastName: 'Apellido',
     age: 'Edad',
-    passport_N:"Numero de pasaporte"
+    passport_N: 'Numero de pasaporte'
   }
 
   const pasajeroRoutes = {
-    get: "/pasajero",
-    put: "/pasajero",
-    delete: "/pasajero",
-    post: "/pasajero"
+    get: '/pasajero',
+    put: '/pasajero',
+    delete: '/pasajero',
+    post: '/pasajero'
   }
 
   return (
@@ -69,6 +70,10 @@ function App() {
         <Routes>
           <Route path='/vuelos' element={
             <Secction title='Vuelos' id='vuelos' info={vuelosHeaders} route={vuelosRoutes} />
+          }/>
+
+          <Route path='/reservas' element={
+            <ReservaVuelohome title='Reservas' />
           }/>
 
           <Route path='/hoteles' element={
@@ -85,25 +90,25 @@ function App() {
 
           <Route path='/categorias' element={
             <SectionCat />
-          }/> 
+          }/>
 
           <Route path='/categorias' element={
             <SectionCat />
-          }/> 
+          }/>
 
           <Route path='/reclamos' element={
-            <SecctionForm id="infocenter" title="Info center"  />
-          }/> 
+            <SecctionForm id="infocenter" title="Info center" />
+          }/>
 
           <Route path='/pasajerofrecuente' element={
-            <SecctionFormCliente id="cliente" title="Cliente Frecuente"  />
-          }/> 
+            <SecctionFormCliente id="cliente" title="Cliente Frecuente" />
+          }/>
 
         </Routes>
       </LocalizationProvider>
     </Provider>
 
-  );
+  )
 }
 
-export default App;
+export default App

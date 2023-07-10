@@ -3,7 +3,7 @@ import axios from 'axios'
 
 class ApiClientConnection {
   constructor (route, username, password) {
-    this.url = 'http://20.102.31.112:10801'
+    this.url = 'http://20.102.31.112'
     this.route = route
     this.username = username
     this.password = password

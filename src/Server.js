@@ -3,7 +3,7 @@ import axios from 'axios'
 
 class ApiConnection {
   constructor (route) {
-    this.url = 'http://20.102.31.112:10801'
+    this.url = 'http://localhost:10801'
     this.route = route
   }
 

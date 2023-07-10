@@ -2,5 +2,13 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript"]
+  "eslint.validate": [
+    "javascript"
+  ],
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/f33a2a9b-da53-4f4f-8c71-231d0e6362f7/resourceGroups/airlneFronted/providers/Microsoft.Web/sites/airlneApp",
+  "appService.deploySubpath": "."
 }

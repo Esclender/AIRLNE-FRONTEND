@@ -3,7 +3,7 @@ import axios from 'axios'
 
 class ApiConnection {
   constructor (route) {
-    this.url = 'http://20.102.31.112:10801'
+    this.url = 'http://localhost:10801'
     this.route = route
   }
 
@@ -17,6 +17,7 @@ class ApiConnection {
 
   async getInstance () {
     const token = await this.getToken()
+
     const api = axios.create({
       baseURL: this.url,
       timeout: 1000,

@@ -13,10 +13,18 @@ module.exports = {
         node: true
       },
       files: [
-        '.eslintrc.{js,cjs}'
+        '.eslintrc.{js,cjs,jsx}'
       ],
       parserOptions: {
-        sourceType: 'script'
+        sourceType: 'script',
+        ecmaFeatures: {
+          experimentalObjectRestSpread: true,
+          jsx: true,
+          arrowFunctions: true,
+          classes: true,
+          modules: true,
+          defaultParams: true
+        }
       }
     }
   ],
@@ -32,6 +40,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-key': 'off',
     eqeqeq: 'off',
-    'no-unused-vars': 'warn'
+    'no-unused-vars': 'warn',
+    'dot-notation': 'off'
   }
 }

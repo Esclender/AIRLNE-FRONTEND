@@ -2,8 +2,13 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "eslint.options": {
+    "extensions":  [".jsx", ".js"]
+  },
   "eslint.validate": [
-    "javascript"
+    "javascript",
+    "javascriptreact",
+    "jsx"
   ],
   "appService.zipIgnorePattern": [
     "node_modules{,/**}",

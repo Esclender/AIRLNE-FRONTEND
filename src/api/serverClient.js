@@ -1,5 +1,4 @@
-import axios from 'axios'
-import { Api } from './Server'
+import { Api } from './axios'
 import { refreshClientToken, getToken } from './utils'
 
 class ApiClientConnection extends Api {
